@@ -2,7 +2,7 @@
 //  NC1.swift
 //  sqliteDB-SampleiOS
 //
-//  Created by Sittichai Worachotekamjorn on 18/11/2564 BE.
+//  Created by supakit on 29/11/2564 BE.
 //
 
 import UIKit
@@ -13,6 +13,7 @@ class NC1: UINavigationController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        print("Login Successfully!!!")
     }
     
 

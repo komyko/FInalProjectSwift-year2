@@ -2,13 +2,16 @@
 //  TableViewCell.swift
 //  sqliteDB-SampleiOS
 //
-//  Created by parsobsri on 5/12/2564 BE.
+//  Created by supakit on 5/12/2564 BE.
 //
 
 import UIKit
 
 class TableViewCell: UITableViewCell {
 
+    @IBOutlet weak var pricepd: UILabel!
+    @IBOutlet weak var namepd: UILabel!
+    @IBOutlet weak var pic: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

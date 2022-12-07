@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  sqliteDB-SampleiOS
 //
-//  Created by Sittichai Worachotekamjorn on 18/11/2564 BE.
+//  Created by supakit on 18/11/2564 BE.
 //
 
 import UIKit

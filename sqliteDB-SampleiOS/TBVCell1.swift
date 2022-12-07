@@ -2,13 +2,16 @@
 //  TBVCell1.swift
 //  sqliteDB-SampleiOS
 //
-//  Created by Sittichai Worachotekamjorn on 25/11/2564 BE.
+//  Created by supakit 25/11/2564 BE.
 //
 
 import UIKit
 
 class TBVCell1: UITableViewCell {
 
+    @IBOutlet weak var lbView: UILabel!
+    @IBOutlet weak var lbArtist: UILabel!
+    @IBOutlet weak var imgView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

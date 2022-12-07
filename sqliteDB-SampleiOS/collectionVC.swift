@@ -2,28 +2,50 @@
 //  collectionVC.swift
 //  sqliteDB-SampleiOS
 //
-//  Created by parsobsri on 7/12/2564 BE.
+//  Created by supakit on 7/12/2564 BE.
 //
 
 import UIKit
 
-class collectionVC: UIViewController {
+class collectionVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+    private let collectionview = UICollectionView(frame: .zero,
+    collectionViewLayout: UICollectionViewFlowLayout()
+    )
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        collectionview.register(IMGCollectionViewCell.self,
+                                forCellWithReuseIdentifier: IMGCollectionViewCell.identifier)
+        collectionview.delegate = self
+        collectionview.dataSource = self
+        view.addSubview(collectionview)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        collectionview.frame = view.bounds
     }
-    */
-
+        
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 30
+    }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionview.dequeueReusableCell(withReuseIdentifier: IMGCollectionViewCell.identifier, for: indexPath)
+        return cell
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(
+            width: (view.frame.size.width/3)-3,
+                    height: (view.frame.size.width/3)-3
+        )
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
+    
+    
 }

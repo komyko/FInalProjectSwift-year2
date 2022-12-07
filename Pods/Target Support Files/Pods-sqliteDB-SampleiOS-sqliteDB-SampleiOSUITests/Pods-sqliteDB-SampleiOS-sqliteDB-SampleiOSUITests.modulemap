@@ -1,0 +1,6 @@
+framework module Pods_sqliteDB_SampleiOS_sqliteDB_SampleiOSUITests {
+  umbrella header "Pods-sqliteDB-SampleiOS-sqliteDB-SampleiOSUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
